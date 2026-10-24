@@ -26,6 +26,7 @@ class SachithDilshanKaluwitharana:
         self.location   = "Sri Lanka 🇱🇰"
         self.study      = "BSc (Hons) Computer Science @ NSBM Green University"
         self.since      = "2015"
+        self.started    = ["Web Development", "Graphic Design", "Network Administration"]
         self.experience = "11 years, 9 months, 23 days"
         self.roles      = [
             "CEO", "Developer", "Designer", "Editor", "Admin",
