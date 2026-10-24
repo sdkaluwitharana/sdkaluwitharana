@@ -293,10 +293,6 @@ me = SachithDilshanKaluwitharana()
   <img src="https://streak-stats.demolab.com/?user=sdkaluwitharana&hide_border=true&background=0b1118&ring=5ee8ff&fire=5dff8a&currStreakLabel=5ee8ff&sideLabels=d6e2ef&currStreakNum=ffffff&sideNums=ffffff&dates=6b7a8c&stroke=1b2a36" width="100%" alt="GitHub streak" />
 </p>
 
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=sdkaluwitharana&bg_color=0b1118&color=5ee8ff&line=5dff8a&point=ffffff&area=true&area_color=5dff8a&hide_border=true&custom_title=Contribution%20Activity" width="100%" alt="Contribution activity graph" />
-</p>
-
 ### `$ ./snake.sh`
 
 <p align="center">
