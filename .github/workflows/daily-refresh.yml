@@ -1,0 +1,39 @@
+name: Daily refresh (counters)
+
+on:
+  schedule:
+    - cron: "35 18 * * *" # 00:05 Sri Lanka time, every day
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install figlet for the cover
+        run: pip install pyfiglet
+
+      - name: Rebuild cover (GitHub "Joined" counter) and README (experience counter)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          export GITHUB_JOINED="$(gh api users/${{ github.repository_owner }} --jq .created_at)"
+          echo "Account created: $GITHUB_JOINED"
+          python3 build_cover.py
+          python3 build_readme.py
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet; then
+            echo "No change today."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git commit -am "chore: refresh counters"
+          git push

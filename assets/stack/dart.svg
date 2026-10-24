@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="112" viewBox="0 0 100 112">
+<title>Dart</title>
+<rect x="16.0" y="4" width="68" height="68" rx="16" fill="#0175C2"/>
+<rect x="16.5" y="4.5" width="67" height="67" rx="15.5" fill="none" stroke="#ffffff" stroke-opacity="0.07"/>
+<g transform="translate(30.0 18.0) scale(1.6667)" fill="#ffffff"><path d="M4.105 4.105S9.158 1.58 11.684.316a3.079 3.079 0 0 1 1.481-.315c.766.047 1.677.788 1.677.788L24 9.948v9.789h-4.263V24H9.789l-9-9C.303 14.5 0 13.795 0 13.105c0-.319.18-.818.316-1.105l3.789-7.895zm.679.679v11.787c.002.543.021 1.024.498 1.508L10.204 23h8.533v-4.263L4.784 4.784zm12.055-.678c-.899-.896-1.809-1.78-2.74-2.643-.302-.267-.567-.468-1.07-.462-.37.014-.87.195-.87.195L6.341 4.105l10.498.001z"/></g>
+<text x="50.0" y="92" text-anchor="middle" fill="#d6e2ef" font-size="11.5" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Inter,Arial,sans-serif" font-weight="600">Dart</text>
+</svg>

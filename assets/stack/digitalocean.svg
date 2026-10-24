@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="112" viewBox="0 0 100 112">
+<title>DigitalOcean</title>
+<rect x="16.0" y="4" width="68" height="68" rx="16" fill="#0080FF"/>
+<rect x="16.5" y="4.5" width="67" height="67" rx="15.5" fill="none" stroke="#ffffff" stroke-opacity="0.07"/>
+<g transform="translate(30.0 18.0) scale(1.6667)" fill="#ffffff"><path d="M12.04 0C5.408-.02.005 5.37.005 11.992h4.638c0-4.923 4.882-8.731 10.064-6.855a6.95 6.95 0 014.147 4.148c1.889 5.177-1.924 10.055-6.84 10.064v-4.61H7.391v4.623h4.61V24c7.86 0 13.967-7.588 11.397-15.83-1.115-3.59-3.985-6.446-7.575-7.575A12.8 12.8 0 0012.039 0zM7.39 19.362H3.828v3.564H7.39zm-3.563 0v-2.978H.85v2.978z"/></g>
+<text x="50.0" y="92" text-anchor="middle" fill="#d6e2ef" font-size="11.5" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Inter,Arial,sans-serif" font-weight="600">DigitalOcean</text>
+</svg>

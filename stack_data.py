@@ -1,0 +1,193 @@
+"""Tech stack: groups -> (icon key | None, label, official URL, monogram, monogram colour).
+
+icon key  = simple-icons key in stack-icons.json, or a special glyph: "!win" (four panes), "!lock" (padlock).
+monogram  = used when no official logo is available (brand did not publish one to simple-icons).
+Every link gets a referral tag so sites can see visits came from this GitHub profile.
+"""
+
+REF = "ref=github.com/sdkaluwitharana"
+
+
+def with_ref(url: str) -> str:
+    base, frag = (url.split("#", 1) + [""])[:2]
+    base += ("&" if "?" in base else "?") + REF
+    return base + ("#" + frag if frag else "")
+
+
+I = lambda key, label, url, color=None: (key, label, url, None, color)           # noqa: E731
+M = lambda mono, label, url, color: (None, label, url, mono, color)              # noqa: E731
+
+STACK = [
+    ("languages", [
+        I("Html5", "HTML", "https://developer.mozilla.org/en-US/docs/Web/HTML"),
+        I("Css3", "CSS", "https://developer.mozilla.org/en-US/docs/Web/CSS"),
+        I("Javascript", "JavaScript", "https://developer.mozilla.org/en-US/docs/Web/JavaScript"),
+        I("Typescript", "TypeScript", "https://www.typescriptlang.org/"),
+        I("Php", "PHP", "https://www.php.net/"),
+        I("Python", "Python", "https://www.python.org/"),
+        I("Openjdk", "Java", "https://dev.java/"),
+        I("Kotlin", "Kotlin", "https://kotlinlang.org/"),
+        I("Swift", "Swift", "https://www.swift.org/"),
+        I("Dart", "Dart", "https://dart.dev/"),
+        I("Cplusplus", "C++", "https://isocpp.org/"),
+        M("C#", "C#", "https://learn.microsoft.com/dotnet/csharp/", "#a179dc"),
+        I("Go", "Go", "https://go.dev/"),
+        I("Rust", "Rust", "https://www.rust-lang.org/"),
+        I("Ruby", "Ruby", "https://www.ruby-lang.org/"),
+        I("R", "R", "https://www.r-project.org/"),
+        M("SQL", "SQL", "https://en.wikipedia.org/wiki/SQL", "#5ee8ff"),
+        I("Perl", "Perl", "https://www.perl.org/"),
+        I("Julia", "Julia", "https://julialang.org/"),
+        M("M", "MATLAB", "https://www.mathworks.com/products/matlab.html", "#e16737"),
+        M("VB", "Visual Basic", "https://learn.microsoft.com/dotnet/visual-basic/", "#945db7"),
+        M("Pas", "Pascal", "https://www.freepascal.org/", "#e3c14f"),
+        I("Delphi", "Delphi / Object Pascal", "https://www.embarcadero.com/products/delphi"),
+        I("Fortran", "Fortran", "https://fortran-lang.org/"),
+        M("COB", "COBOL", "https://en.wikipedia.org/wiki/COBOL", "#4f9fe0"),
+        M("ASM", "Assembly", "https://en.wikipedia.org/wiki/Assembly_language", "#c9a46b"),
+        I("Scratch", "Scratch", "https://scratch.mit.edu/"),
+    ]),
+    ("frontend", [
+        I("React", "React", "https://react.dev/"),
+        I("Vuedotjs", "Vue.js", "https://vuejs.org/"),
+        I("Angular", "Angular", "https://angular.dev/"),
+        I("Svelte", "Svelte", "https://svelte.dev/"),
+        I("Astro", "Astro", "https://astro.build/"),
+        I("Bootstrap", "Bootstrap", "https://getbootstrap.com/"),
+        I("Tailwindcss", "Tailwind CSS", "https://tailwindcss.com/"),
+        I("Jquery", "jQuery", "https://jquery.com/"),
+    ]),
+    ("backend", [
+        I("Nodedotjs", "Node.js", "https://nodejs.org/"),
+        I("Laravel", "Laravel", "https://laravel.com/"),
+        I("Django", "Django", "https://www.djangoproject.com/"),
+        I("Fastapi", "FastAPI", "https://fastapi.tiangolo.com/"),
+        I("Springboot", "Spring Boot", "https://spring.io/projects/spring-boot"),
+        I("Dotnet", "ASP.NET", "https://dotnet.microsoft.com/apps/aspnet"),
+        I("Wordpress", "WordPress", "https://wordpress.org/"),
+        M("MERN", "MERN Stack", "https://www.mongodb.com/resources/languages/mern-stack", "#47a248"),
+    ]),
+    ("ai / ml / dl", [
+        I("Tensorflow", "TensorFlow", "https://www.tensorflow.org/"),
+        I("Keras", "Keras", "https://keras.io/"),
+        I("Pytorch", "PyTorch", "https://pytorch.org/"),
+        I("Scikitlearn", "scikit-learn", "https://scikit-learn.org/"),
+        I("Nvidia", "CUDA", "https://developer.nvidia.com/cuda-toolkit"),
+        I("Opencv", "OpenCV", "https://opencv.org/"),
+        I("Ollama", "Ollama", "https://ollama.com/"),
+        M("DN", "Darknet", "https://pjreddie.com/darknet/", "#e05252"),
+    ]),
+    ("data", [
+        I("Pandas", "pandas", "https://pandas.pydata.org/"),
+        I("Numpy", "NumPy", "https://numpy.org/"),
+        I("Polars", "Polars", "https://pola.rs/"),
+        I("Jupyter", "Jupyter", "https://jupyter.org/"),
+        M("gg", "ggplot2", "https://ggplot2.tidyverse.org/", "#7fb3e6"),
+    ]),
+    ("databases", [
+        I("Mysql", "MySQL", "https://www.mysql.com/"),
+        I("Mariadb", "MariaDB", "https://mariadb.org/"),
+        I("Postgresql", "PostgreSQL", "https://www.postgresql.org/"),
+        I("Sqlite", "SQLite", "https://www.sqlite.org/"),
+        I("Oracle", "Oracle Database", "https://www.oracle.com/database/"),
+        I("Mongodb", "MongoDB", "https://www.mongodb.com/"),
+        I("Redis", "Redis", "https://redis.io/"),
+        I("Neo4j", "Neo4j", "https://neo4j.com/"),
+        M("Ch", "ChromaDB", "https://www.trychroma.com/", "#ffde2d"),
+        M("Pc", "Pinecone", "https://www.pinecone.io/", "#d6e2ef"),
+        I("Googlebigquery", "BigQuery", "https://cloud.google.com/bigquery"),
+    ]),
+    ("cloud & devops", [
+        I("Amazonwebservices", "AWS", "https://aws.amazon.com/"),
+        I("Digitalocean", "DigitalOcean", "https://www.digitalocean.com/"),
+        I("Vercel", "Vercel", "https://vercel.com/"),
+        I("Docker", "Docker", "https://www.docker.com/"),
+        I("Mamp", "MAMP", "https://www.mamp.info/"),
+    ]),
+    ("mobile & app stores", [
+        I("Flutter", "Flutter", "https://flutter.dev/"),
+        I("Android", "Android", "https://www.android.com/"),
+        I("Ios", "iOS", "https://www.apple.com/ios/"),
+        I("Apple", "iPadOS", "https://www.apple.com/ipados/"),
+        I("Apple", "watchOS", "https://www.apple.com/watchos/"),
+        I("Appstore", "App Store", "https://www.apple.com/app-store/"),
+        I("Googleplay", "Play Store", "https://play.google.com/"),
+        M("MS", "Microsoft Store", "https://apps.microsoft.com/", "#6fc3ff"),
+        I("Huawei", "Huawei AppGallery", "https://appgallery.huawei.com/"),
+    ]),
+    ("operating systems", [
+        I("Macos", "macOS", "https://www.apple.com/macos/"),
+        I("!win", "Windows", "https://www.microsoft.com/windows"),
+        I("!win", "Windows Server", "https://www.microsoft.com/windows-server"),
+        I("Linux", "Linux", "https://www.kernel.org/"),
+        I("Ubuntu", "Ubuntu", "https://ubuntu.com/"),
+        I("Debian", "Debian", "https://www.debian.org/"),
+        I("Fedora", "Fedora", "https://fedoraproject.org/"),
+        I("Archlinux", "Arch Linux", "https://archlinux.org/"),
+        I("Kalilinux", "Kali Linux", "https://www.kali.org/"),
+        I("Opensuse", "openSUSE", "https://www.opensuse.org/"),
+        I("Gentoo", "Gentoo", "https://www.gentoo.org/"),
+        I("Qubesos", "Qubes OS", "https://www.qubes-os.org/"),
+        M("Mo", "Mobian", "https://mobian-project.org/", "#d70a53"),
+        M("Ha", "Hanthana Linux", "https://www.hanthana.org/", "#f2a51a"),
+        I("Googlechrome", "ChromeOS", "https://chromeos.google/"),
+    ]),
+    ("browsers", [
+        I("Googlechrome", "Chrome", "https://www.google.com/chrome/"),
+        I("Googlechrome", "Chromium", "https://www.chromium.org/", "#4f8ff7"),
+        I("Firefoxbrowser", "Firefox", "https://www.mozilla.org/firefox/"),
+        I("Safari", "Safari", "https://www.apple.com/safari/"),
+        I("Torproject", "Tor", "https://www.torproject.org/"),
+    ]),
+    ("security & computer science", [
+        I("!lock", "Cryptography", "https://en.wikipedia.org/wiki/Cryptography"),
+        I("Bitcoin", "Cryptocurrency", "https://en.wikipedia.org/wiki/Cryptocurrency"),
+        I("Thealgorithms", "Algorithms & Data Structures", "https://the-algorithms.com/"),
+        M("WV", "Widevine", "https://www.widevine.com/", "#e8e8e8"),
+    ]),
+    ("terminal & remote", [
+        M(">_", "Terminal", "https://support.apple.com/guide/terminal/welcome/mac", "#5dff8a"),
+        M("PS>", "PowerShell", "https://learn.microsoft.com/powershell/", "#5391fe"),
+        M("C:\\", "CMD", "https://learn.microsoft.com/windows-server/administration/windows-commands/cmd", "#d6e2ef"),
+        M("iSH", "iSH", "https://ish.app/", "#d6e2ef"),
+        I("Termius", "Termius", "https://termius.com/"),
+        M("PT", "PuTTY", "https://www.chiark.greenend.org.uk/~sgtatham/putty/", "#6fc3ff"),
+        M("SSH", "SSH", "https://www.openssh.com/", "#ffd75e"),
+        M("SFTP", "SFTP", "https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol", "#ffd75e"),
+        M("TEL", "Telnet", "https://datatracker.ietf.org/doc/html/rfc854", "#ffd75e"),
+    ]),
+    ("communities & learning", [
+        I("Discourse", "Discourse", "https://www.discourse.org/"),
+        M("XF", "XenForo", "https://xenforo.com/", "#4f9fe0"),
+        M("Fl", "Flarum", "https://flarum.org/", "#e7672e"),
+        M("BB", "MyBB", "https://mybb.com/", "#5e9fd6"),
+        M("NB", "NodeBB", "https://nodebb.org/", "#5ee8ff"),
+        I("Moodle", "Moodle", "https://moodle.org/"),
+    ]),
+    ("design & 3d", [
+        I("Adobephotoshop", "Photoshop", "https://www.adobe.com/products/photoshop.html"),
+        I("Adobeillustrator", "Illustrator", "https://www.adobe.com/products/illustrator.html"),
+        I("Figma", "Figma", "https://www.figma.com/"),
+        I("Canva", "Canva", "https://www.canva.com/"),
+        I("Blender", "Blender", "https://www.blender.org/"),
+    ]),
+    ("video & photo editing", [
+        I("Adobepremierepro", "Premiere Pro", "https://www.adobe.com/products/premiere.html"),
+        I("Adobeaftereffects", "After Effects", "https://www.adobe.com/products/aftereffects.html"),
+        I("Adobelightroom", "Lightroom", "https://www.adobe.com/products/photoshop-lightroom.html"),
+        I("Davinciresolve", "DaVinci Resolve", "https://www.blackmagicdesign.com/products/davinciresolve"),
+    ]),
+    ("ides & tools", [
+        M("</>", "VS Code", "https://code.visualstudio.com/", "#3aa0f2"),
+        I("Rider", "JetBrains Rider", "https://www.jetbrains.com/rider/"),
+        I("Pycharm", "PyCharm", "https://www.jetbrains.com/pycharm/"),
+        I("Webstorm", "WebStorm", "https://www.jetbrains.com/webstorm/"),
+        I("Intellijidea", "IntelliJ IDEA", "https://www.jetbrains.com/idea/"),
+        I("Androidstudio", "Android Studio", "https://developer.android.com/studio"),
+        I("Xcode", "Xcode", "https://developer.apple.com/xcode/"),
+        I("Apachenetbeanside", "NetBeans", "https://netbeans.apache.org/"),
+        I("Git", "Git", "https://git-scm.com/"),
+        I("Github", "GitHub", "https://github.com/"),
+        I("Postman", "Postman", "https://www.postman.com/"),
+    ]),
+]

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="112" viewBox="0 0 100 112">
+<title>ASP.NET</title>
+<rect x="16.0" y="4" width="68" height="68" rx="16" fill="#512BD4"/>
+<rect x="16.5" y="4.5" width="67" height="67" rx="15.5" fill="none" stroke="#ffffff" stroke-opacity="0.07"/>
+<g transform="translate(30.0 18.0) scale(1.6667)" fill="#ffffff"><path d="M24 8.77h-2.468v7.565h-1.425V8.77h-2.462V7.53H24zm-6.852 7.565h-4.821V7.53h4.63v1.24h-3.205v2.494h2.953v1.234h-2.953v2.604h3.396zm-6.708 0H8.882L4.78 9.863a2.896 2.896 0 0 1-.258-.51h-.036c.032.189.048.592.048 1.21v5.772H3.157V7.53h1.659l3.965 6.32c.167.261.275.442.323.54h.024c-.04-.233-.06-.629-.06-1.185V7.529h1.372zm-8.703-.693a.868.829 0 0 1-.869.829.868.829 0 0 1-.868-.83.868.829 0 0 1 .868-.828.868.829 0 0 1 .869.829Z"/></g>
+<text x="50.0" y="92" text-anchor="middle" fill="#d6e2ef" font-size="11.5" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Inter,Arial,sans-serif" font-weight="600">ASP.NET</text>
+</svg>

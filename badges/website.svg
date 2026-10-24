@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="40" viewBox="0 0 140 40" font-family="'JetBrains Mono','Fira Code','Cascadia Code','SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace">
+<title>Website</title>
+<defs><filter id="g" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="1.2" result="b"/>
+<feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<rect x="0.5" y="0.5" width="139" height="39" rx="7" fill="#0b1118" stroke="#1f6f7d"/>
+<rect x="0.5" y="0.5" width="3" height="39" rx="1.5" fill="#5dff8a" opacity="0.85"/>
+<g transform="translate(14 10) scale(0.8333)" stroke="#5ee8ff" filter="url(#g)"><g fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><ellipse cx="12" cy="12" rx="4.2" ry="10"/><path d="M2 12h20M4 6.5h16M4 17.5h16"/></g></g>
+<text x="44" y="25.5" fill="#5dff8a" font-size="14" font-weight="700">&gt;</text>
+<text x="56" y="25.5" fill="#d6e2ef" font-size="14" font-weight="700" letter-spacing="1.6" textLength="70.0" lengthAdjust="spacingAndGlyphs">WEBSITE</text>
+</svg>
